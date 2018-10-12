@@ -1,0 +1,50 @@
+// ***** variables *****
+
+// colors
+$white: #fff;
+$black: #000;  
+ 
+
+// ***** mixins *****
+// fonts
+// @mixin open-sans-normal {
+// font-family: 'Open Sans', sans-serif;
+// font-weight: 400; 
+// font-style: normal;
+// }
+
+
+// -- default -- top: 0em; left: 0em;
+@mixin pos($top:0em, $left: 0em ) {
+top: $top;
+left: $left;    
+}
+
+// -- default -- position: relative;
+@mixin block($position: relative  ) {
+position: $position;
+display: block;
+}
+
+// -- default -- float: left;
+@mixin inline($float: left) {
+float: $float;
+display: inline;
+}
+
+// -- default -- width: {needs to define}; height: 0em;
+@mixin size($width, $height: 0em) {
+width: $width; 
+height: $height;
+}
+
+// -- default -- margin: 0em; padding: 0em;
+@mixin zero($margin: 0em, $padding: 0em){
+margin: $margin;
+padding: $padding;
+}
+
+@mixin font-size( $font-size ) {
+font-size: $font-size * 1px;
+font-size: $font-size/10 * 1rem;
+}

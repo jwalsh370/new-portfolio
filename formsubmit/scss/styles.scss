@@ -1,0 +1,227 @@
+@import "variables_mixins_functions";
+@import "media_queries";
+
+* {
+position: relative;
+@include zero;
+background-repeat: no-repeat;
+text-decoration: none;
+outline: none;
+outline: 0;
+}
+
+*,
+:before,
+:after {
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}
+
+html {
+height: 100%;
+}
+
+html { 
+-webkit-tap-highlight-color: rgba(0, 0, 0, 0); 
+-webkit-text-size-adjust: 100%; 
+-ms-text-size-adjust: 100%; 
+}
+
+html, body {
+height: 100%;
+@include zero;
+}   
+
+body { 
+font-family: 'Trebuchet MS', Helvetica, verdana, Arial, sans-serif;
+background: $white;
+text-align:center;
+-webkit-text-size-adjust: 100%; 
+min-height: 100%;
+font-size: 62.5%;
+}
+
+#main_container {
+@include block;
+min-height:100%;
+text-align:left;
+margin: 0em auto;
+    
+    header, main#content{
+    @include block;
+    }
+
+    header{
+    height: 50px;    
+    }
+
+    main#content {
+    margin: 0em !important; 
+    padding: 0em 0em 50px 0em;  // height of footer(50px)  
+    }
+}
+
+.ie7{
+
+    // IE7 styles  
+}
+
+
+.ie8{
+
+    // IE8 styles  
+}
+
+.ie9{
+    
+    // IE9 styles
+}
+
+html[data-useragent*='MSIE 10.0'] {
+    
+    // IE10 styles
+}
+
+html[data-useragent*='rv:11.0'] {
+    
+    // IE11 styles
+
+}
+
+
+// ***** footer *****
+footer {
+@include block(absolute);
+bottom:0;
+width: 100%;
+min-height: 50px;
+margin: 0em !important;    
+}
+
+// misc
+.min_height {
+height: 100px;
+min-height: 100px;
+height:auto !important;
+padding: 0em 0em 10px 0em;
+}
+
+* html .min_height { 
+height: 100px; 
+}
+
+html>body .min_height {
+height: auto;
+}
+
+
+ol, ul {
+list-style-type: none;
+}
+
+ol li, ul li {
+vertical-align: top !important;
+}
+
+a, a img {
+border: 0px;
+text-decoration: none;
+cursor: pointer;
+}
+
+a:focus {
+outline: none;
+}
+
+:focus {
+outline: 0;
+}
+
+a:active{
+@include pos(1px, 1px);    
+}
+
+::-webkit-selection{
+// background: $salmon !important; 
+color: $white; 
+text-shadow: none;
+}
+
+::-moz-selection{
+// background: $salmon !important; 
+color: $white; 
+text-shadow: none;
+}
+
+::selection {
+// background: $salmon !important;  
+color: $white; 
+text-shadow: none;
+} 
+
+/* Get a Clear Fix on Clearing Floats 
+http://www.sitepoint.com/css-architectures-new-best-practices/ */
+/* For modern browsers */
+.cf:before,
+.cf:after {
+content:"";
+display:table;
+}
+
+.cf:after {
+clear:both;
+}
+
+/* For IE 6/7 (triggers hasLayout) */
+.cf {
+*zoom:1;
+}
+
+.overflow_hidden {
+overflow: hidden;     /* Clearfix! */
+zoom: 1;              /* Triggers "hasLayout" in IE */
+display: block;       /* Element must be a block to wrap around contents. Unnecessary if only using on elements that are block-level by default. */
+}                    
+
+img.responsive_image {
+max-width: 100%;
+height: auto;
+}
+
+/*noscript*/
+.disabled {
+@include block;
+width: 900px;
+margin: 0em auto;
+padding: 0em;
+display: none;
+text-align: center;
+clear: both;
+
+    p, h1  {
+    background: #fff;
+    font: normal 'Trebuchet MS', Helvetica, verdana, Arial, sans-serif;
+    @include fontSize(16);  
+    color: $black;
+    }
+
+    h1  {
+    padding-top: 16px;
+    }
+    
+    p  {
+    padding-bottom: 16px;
+    }
+
+    a {
+    color: $black;
+    text-decoration: underline;
+    }
+}
+
+.noscript .disabled {
+display: inherit;
+}
+
+

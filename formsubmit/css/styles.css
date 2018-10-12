@@ -1,0 +1,158 @@
+* {
+position: relative;
+margin:0;
+padding:0;
+background-repeat: no-repeat;
+text-decoration: none;
+/*vertical-align: middle;*/
+outline: none;
+outline: 0;
+}
+
+*,
+:before,
+:after {
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}
+
+html {
+height: 100%;
+}
+
+html { 
+-webkit-tap-highlight-color: rgba(0, 0, 0, 0); 
+-webkit-text-size-adjust: 100%; 
+-ms-text-size-adjust: 100%; 
+}
+
+html, body {
+height: 100%;
+margin: 0;
+padding: 0;
+}	
+
+body { 
+font-family: 'Trebuchet MS', Helvetica, verdana, Arial, sans-serif;
+background: #fff;
+text-align:center;
+-webkit-text-size-adjust: 100%; 
+min-height:100%;
+margin: 0em auto;
+font-size: 62.5%;
+z-index: 0;
+}
+
+#main {
+position: relative;
+text-align:left;
+}
+
+.min-height {
+height: 100px;
+min-height: 100px;
+height:auto !important;
+padding: 0em 0em 10px 0em;
+}
+
+* html .min-height { 
+height: 100px; 
+}
+
+html>body .min-height {
+height: auto;
+}
+
+
+ol, ul {
+list-style-type: none;
+}
+
+ol li, ul li {
+vertical-align: top !important;
+}
+
+a, a img {
+border: 0px;
+text-decoration: none;
+cursor: pointer;
+}
+
+a:focus {
+outline: none;
+}
+
+:focus {
+outline: 0;
+}
+
+/* Get a Clear Fix on Clearing Floats 
+http://www.sitepoint.com/css-architectures-new-best-practices/ */
+/* For modern browsers */
+.clearfix:before,
+.clearfix:after {
+content:"";
+display:table;
+}
+
+.clearfix:after {
+clear:both;
+}
+
+/* For IE 6/7 (triggers hasLayout) */
+.clearfix {
+*zoom:1;
+}
+
+.overflow_hidden {
+overflow: hidden;     /* Clearfix! */
+zoom: 1;              /* Triggers "hasLayout" in IE */
+display: block;       /* Element must be a block to wrap around contents. Unnecessary if only using on elements that are block-level by default. */
+}                    
+
+
+/* responsive image */
+/* http://www.sitepoint.com/css-architectures-new-best-practices/
+http://webdesignerwall.com/tutorials/5-useful-css-tricks-for-responsive-design/comment-page-1
+*/
+
+img.responsive {
+max-width: 100%;
+height: auto;
+}
+
+
+/*noscript*/
+.disabled {
+position: relative;
+width: 900px;
+margin: 0em auto;
+padding: 0em;
+display: none;
+text-align: center;
+clear: both;
+}
+
+.disabled p, .disabled h1  {
+font: normal 16px 'Trebuchet MS', Helvetica, verdana, Arial, sans-serif;
+background: #fff;
+color: #911;
+}
+
+.disabled h1  {
+padding-top: 16px;
+}
+
+.disabled p  {
+padding-bottom: 16px;
+}
+
+.disabled a {
+color: #911;
+text-decoration: underline;
+}
+
+.noscript .disabled {
+display: inherit;
+}

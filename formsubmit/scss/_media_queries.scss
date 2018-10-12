@@ -1,0 +1,39 @@
+/***** small screen *****/
+@media only screen and (min-width : 400px) and (max-width: 450px) {
+
+
+}
+
+/***** Smartphones (portrait and landscape) *****/
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+   
+}
+
+/***** small to medium screen *****/
+@media (min-width : 400px) and (max-width: 1040px) {
+
+
+}  
+
+@media (min-width : 480px) and (max-width: 1224px) {
+    
+}
+
+/***** tablets *****/
+/* iPad portrait */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+    
+    
+}
+
+
+/* iPad landscape */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+    
+    
+}
+
+/***** desktop *****/
+@media only screen and (min-width : 1224px) {
+    
+}
